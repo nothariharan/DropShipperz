@@ -2,7 +2,6 @@ import './Sidebar.css'
 import Category from './Category/Category'
 import Price from './Price/Price'
 import Colors from './Colors/Colors'
-import Gender from './Gender/Gender'
 function Sidebar({handleChange}) {
   return <>
    <section className='sidebar'>
@@ -12,7 +11,6 @@ function Sidebar({handleChange}) {
     <Category handleChange={handleChange}/>
     <Price handleChange={handleChange}/>
     <Colors handleChange={handleChange}/>
-    <Gender />
    </section>
   </>
 }

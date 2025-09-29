@@ -21,3 +21,8 @@
     color:#323232;
     cursor:pointer;
 }
+
+.btns.active {
+  background: black;
+  color: white;
+}

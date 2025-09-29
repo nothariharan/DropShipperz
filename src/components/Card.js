@@ -1,18 +1,18 @@
 import { FaStar } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
-export default function Card() {
+export default function Card({ img, title, star, reviews, newPrice, prevPrice}) {
   return (
     <section className='card'>
-        <img src='https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg'alt='Nike Air Monarch 1' className='card-image'/>
+        <img src={img} className="card-img" alt={title} style={{width:"200px"}}/>
         <div className='card-details'>
-          <h3 className='card-title'>Air Monarch 1</h3>
+          <h3 className='card-title'>{title}</h3>
           <section className='card-reviews'>
-            <FaStar className='rating-star'/>  <FaStar className='rating-star' />  <FaStar className='rating-star'/>  <FaStar className='rating-star'/>  <FaStar className='rating-star'/>
-            <span className='total-reviews'>4</span>
+            {star}{star}{star}{star}
+            <span className='total-reviews'>{reviews}</span>
             </section>
             <section className='card-price'>
               <div className='price'>
-                <del>$690</del>   $500
+                <del>{prevPrice}</del>       {newPrice}
               </div>
               <div className='bag'>
                 <IoBagOutline className='bag-icon'/>
