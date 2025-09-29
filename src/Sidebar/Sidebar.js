@@ -3,7 +3,7 @@ import Category from './Category/Category'
 import Price from './Price/Price'
 import Colors from './Colors/Colors'
 import Gender from './Gender/Gender'
-function Sidebar(handleChange) {
+function Sidebar({handleChange}) {
   return <>
    <section className='sidebar'>
     <div className='logo-container'>

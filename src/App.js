@@ -1,5 +1,5 @@
 import { Divide } from "lucide-react";
-import Nav from "./Navigation/Nav";
+import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
@@ -66,12 +66,14 @@ function App() {
     ));
   }
 
+  const result = filteredData(products,selectedCategory,query)
+
   return (
     <>
       <Sidebar handleChange={handleChange}/>
-      <Nav />
-      <Recommended />
-      <Products />
+      <Navigation query = {query} handleInputChange={handleInputChange}/>
+      <Recommended handleClick={handleClick}/>
+      <Products result={result}/>
     </>
   );
 }
